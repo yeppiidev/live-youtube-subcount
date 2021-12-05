@@ -1,0 +1,10 @@
+{
+    "api_key": "YOUR_GCLOUD_API_KEY",
+    "youtube": {
+        "user_id": "YOUR_CHANNEL_ID",
+        "profile_pic_roundness": 25
+    },
+    "counter": {
+        "raw_numbers": false
+    }
+}
