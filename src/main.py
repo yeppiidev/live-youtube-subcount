@@ -8,7 +8,6 @@ from PIL import Image, ImageDraw
 import sys, time, pygame, json, keyboard, threading, traceback, urllib, os
 
 # setInterval for python
-# 
 class setInterval:
     def __init__(self, interval, action) :
         self.interval = interval
