@@ -138,13 +138,16 @@ def fetch_count():
     print(f"Subscriber count: {sub_count}")
 
 
-# count update thread
-job = setInterval(5, fetch_count)
+# Create the subcount update thread
+job = setInterval(6, fetch_count)
 
 
 # define a main function
 def main():
     global pfp_img
+
+    if not os.path.exists(os.path.join(os.getcwd(), 'temp')):
+        os.mkdir("temp")
 
     try:
         os.remove("temp/profile_pic.png")
