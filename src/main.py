@@ -40,8 +40,8 @@ def human_format(num):
 
 
 # Read the config
-configFile = open("config.json", "r")
-config = json.loads(configFile.read())
+with open("config.json", "r") as f:
+    config = json.load(f.read())
 
 # Auth and youtube channel id stuff
 youtubeKey = config["api_key"]
