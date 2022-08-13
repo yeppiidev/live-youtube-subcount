@@ -189,7 +189,8 @@ def main():
 
             width, height = pygame.display.get_surface().get_size()
 
-            count_str = f"{human_format(int(sub_count)) if not rawNumbers else format(int(sub_count), ',')}"
+            count_str = f"{format(int(sub_count), ',') if rawNumbers else human_format(int(sub_count))}"
+
             channel_str = f"youtube.com/{sub_name}"
 
             screen.fill((0, 0, 0))
@@ -208,7 +209,7 @@ def main():
                         (width / 2 - tw2 / 2, height / 2 + 80))
             screen.blit(apicount_str_Surf, (10, height - 30))
 
-            if not pfp_img is None:
+            if pfp_img is not None:
                 screen.blit(pfp_img, (width / 2 - pfp_img_size[0] / 2,
                                       height / 2 - 40 - pfp_img_size[1] / 2))
 
